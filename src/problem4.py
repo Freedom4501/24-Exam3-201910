@@ -87,13 +87,16 @@ And this one for n=14:
         for j in range(n-k):
             print(' ', end='')
         for l in range(k+1):
-            print(l + 1, end='')
+            print((l + 1)%10, end='')
         print(end=' ')
         for m in range(2+k):
             print('*', end='')
         print(end=' ')
-        for a in range(n-k,0,-1):
+        for a in range((n-k)%10,0,-1):
             print(a, end='')
+        if k<5:
+            for b in range(10):
+                print((10-b)%10, end='')
         print()
 
 
