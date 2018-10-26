@@ -2,13 +2,13 @@
 Exam 3, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2018.
+         their colleagues and Mashengjun Li.  October 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
-
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -93,7 +93,13 @@ def problem2(sequence):
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    max = 0
+    maxk = 0
+    for k in range(len(sequence)):
+        if abs(sequence[k]) > max:
+            max = abs(sequence[k])
+            maxk = k
+    return maxk
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
